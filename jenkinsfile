@@ -5,7 +5,7 @@ pipeline {
         stage("Code Checkout") {
             steps {
                 echo "Cloning the code"
-                git url: "https://github.com/umahanty/To-Do-Application-Deployment.git", branch: "main"
+                git url: "https://github.com/rajraviojha/Testtodo.git", branch: "main"
             }
         }
 
@@ -32,6 +32,8 @@ pipeline {
         stage("Selenium Test") {
             steps {
                 echo "Running Selenium tests"
+                //sh 'pip install --break-system-packages -r requirements.txt'
+                  sh 'pip install -r requirements.txt'
                   sh 'python3 selenium1.py'
             }
         }
