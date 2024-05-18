@@ -1,4 +1,4 @@
-- hosts: test-server
+- hosts: webservers
   become: true
   tasks:
     - name: update cache
